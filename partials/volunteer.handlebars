@@ -1,0 +1,20 @@
+{{#if volunteer}}
+  <section id="volunteer">
+    <h2>Volunteer</h2>
+    {{#each volunteer}}
+      <strong>{{organization}} | {{position}}</strong>
+      <span class="align-right">{{formatDate startDate}} to {{formatDate endDate}}</span>
+
+      <p class="margin-top">{{summary}}</p>
+
+      {{#if courses}}
+        <h3 class="margin-top">Courses</h3>
+        <ul>
+          {{#each courses as |course|}}
+            <li>{{course}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    {{/each}}
+  </section>
+{{/if}}

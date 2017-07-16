@@ -1,0 +1,18 @@
+{{#if education}}
+  <section id="education">
+    <h2>Education</h2>
+    {{#each education}}
+      <strong>{{institution}} | {{studyType}} {{area}}</strong>
+      <span class="align-right">{{formatDate startDate}} to {{formatDate endDate}}</span>
+
+      {{#if courses}}
+        <h3 class="margin-top">Courses</h3>
+        <ul>
+          {{#each courses as |course|}}
+            <li>{{course}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    {{/each}}
+  </section>
+{{/if}}
